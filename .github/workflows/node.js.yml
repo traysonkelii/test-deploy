@@ -6,9 +6,13 @@ name: Node.js CI
 on:
    workflow_dispatch:
 
-jobs:
-  build:
+permissions:
+  id-token: write
+  contents: read
 
+jobs:
+
+  build:
     runs-on: ubuntu-latest
 
     strategy:
@@ -25,5 +29,19 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build
+    - name: Set AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with: 
+         aws-access-key-id: ${{ secrets.AWS_DEPLOY_KEY_ID }}
+         aws-secret-access-key: ${{ secrets.AWS_DEPLOY_ACCESS_KEY }}
+         region: us-west-1
     - run: npm run deploy
+    - name: Set AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with: 
+         aws-access-key-id: ${{ secrets.AWS_INVALIDATE_KEY_ID }}
+         aws-secret-access-key: ${{ secrets.AWS_INVALIDATE_ACCESS_KEY }}
+         region: us-west-1
     - run: npm run invalidate
+ 
+ 

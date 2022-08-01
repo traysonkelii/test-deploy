@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "aws s3 sync build/ s3://interact-trayson-test --profile deployer",
+    "deploy": "aws s3 sync build/ s3://interact-trayson-test",
     "invalidate": "aws cloudfront create-invalidation --distribution-id E16LF3RBHOJUPL --paths /index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Please work
+          Updating my code
         </p>
         <a
           className="App-link"
@@ -13,7 +13,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          I finally got it
+          Trayson August 3rd at 4:30
         </a>
       </header>
     </div>

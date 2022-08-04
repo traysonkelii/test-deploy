@@ -13,7 +13,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Trayson August 3rd at 5:04 pm
+          Trayson August 3rd at 8:14 pm
         </a>
       </header>
     </div>

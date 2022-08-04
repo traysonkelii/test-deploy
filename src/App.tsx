@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Interact Deployment
+          Interact Deployment Test
         </p>
         <a
           className="App-link"
@@ -13,7 +13,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Trayson August 3rd at 9:03 pm
+          Trayson August 3rd at 9:20 pm
         </a>
       </header>
     </div>
